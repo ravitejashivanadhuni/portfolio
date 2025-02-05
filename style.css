@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #121212;
+    color: white;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6b6b;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+section {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff6b6b, #6b6bff);
+}
+
+#home .content {
+    text-align: center;
+}
+
+#home h1 {
+    font-size: 50px;
+}
+
+#home span {
+    color: yellow;
+}
+
+#home .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: yellow;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#home .btn:hover {
+    background: orange;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image img {
+    width: 250px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills-list span {
+    background: #333;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+}
