@@ -6,7 +6,7 @@
     <title>Raviteja | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
@@ -21,10 +21,6 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="social-links">
-                <a href="https://github.com/raviteja244" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/ravitejashivanadhuni" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
         </nav>
     </header>
 
@@ -74,11 +70,17 @@
         <div class="project-container">
             <div class="project" onclick="redirectTo('hospital-management.html')">
                 <img src="images/hospital.png" alt="Hospital Management System">
-                <h3>Hospital Management System</h3>
+                <div class="project-info">
+                    <h3>Hospital Management System</h3>
+                    <p>A web application for managing hospital operations efficiently.</p>
+                </div>
             </div>
             <div class="project" onclick="redirectTo('resume-builder.html')">
                 <img src="images/resume.png" alt="Resume Builder">
-                <h3>Resume Builder Web App</h3>
+                <div class="project-info">
+                    <h3>Resume Builder Web App</h3>
+                    <p>A MERN stack application for generating professional resumes.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -87,7 +89,16 @@
     <section id="contact">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:ravitejashivanadhuni@gmail.com">ravitejashivanadhuni@gmail.com</a></p>
-        <p>Phone: <a href="tel:+919848689456">+91 9848689456</a></p>
+        
+        <!-- Social Media Links -->
+        <div class="contact-social">
+            <a href="https://github.com/raviteja244" target="_blank">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+            <a href="https://linkedin.com/in/raviteja244" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
     </section>
 
     <footer>
