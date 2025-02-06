@@ -145,6 +145,10 @@
                     formResponse.innerHTML = 'There was an error sending your message. Please try again.';
                     formResponse.style.color = 'red';
                 }
+            })
+            .catch(error => {
+                formResponse.innerHTML = 'Error: ' + error.message;
+                formResponse.style.color = 'red';
             });
         });
     </script>
