@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raviteja | Full Stack Developer Portfolio">
+    <meta name="keywords" content="Raviteja, Full Stack Developer, Portfolio, Web Development, JavaScript, Node.js, React">
+    <meta name="author" content="Raviteja Shivanadhuni">
+    <meta property="og:title" content="Raviteja | Portfolio">
+    <meta property="og:description" content="Portfolio showcasing the skills and projects of Raviteja, a full-stack developer.">
+    <meta property="og:image" content="https://lh3.googleusercontent.com/d/1STQghMI6N6_YbiYJRRpLglUIIkt8l_yk=w500">
+    <meta property="og:url" content="https://ravitejashivanadhuni.netlify.app/">
+    <meta name="twitter:card" content="summary_large_image">
     <title>Raviteja | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
@@ -12,7 +20,7 @@
 
     <!-- Navigation Bar -->
     <header>
-        <div class="logo">RAVITEJA</div>
+        <div class="logo">Raviteja</div>
         <nav>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -99,11 +107,51 @@
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
         </div>
+
+        <!-- Contact Form -->
+        <h3>Or, send me a message:</h3>
+        <form action="https://formspree.io/f/xbldkgez" method="POST" id="contact-form">
+            <input type="text" name="name" id="name" placeholder="Your Name" required>
+            <input type="email" name="email" id="email" placeholder="Your Email" required>
+            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <!-- Success/Error Feedback -->
+        <div id="form-response" class="form-response"></div>
     </section>
 
-    <footer>
-        <p>© 2025 Raviteja | All Rights Reserved</p>
-    </footer>
+    <script>
+        const form = document.getElementById('contact-form');
+        const formResponse = document.getElementById('form-response');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show loading state
+            formResponse.innerHTML = 'Sending...';
+
+            // Send the form data via Formspree
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+            })
+            .then(response => {
+                if (response.ok) {
+                    form.reset(); // Reset form after success
+                    formResponse.innerHTML = 'Message sent successfully!';
+                    formResponse.style.color = 'green';
+                } else {
+                    formResponse.innerHTML = 'There was an error sending your message. Please try again.';
+                    formResponse.style.color = 'red';
+                }
+            })
+            .catch(error => {
+                formResponse.innerHTML = 'Error: ' + error.message;
+                formResponse.style.color = 'red';
+            });
+        });
+    </script>
 
 </body>
 </html>
