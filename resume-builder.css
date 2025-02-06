@@ -1,0 +1,139 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.8;
+    padding: 40px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+}
+
+.back-btn {
+    color: #bb86fc;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.back-btn:hover {
+    color: #ffffff;
+}
+
+/* Main Project Section */
+.project-details {
+    max-width: 1000px;
+    margin: auto;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+.project-details h1 {
+    font-size: 36px;
+    color: #bb86fc;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-details h2 {
+    font-size: 28px;
+    color: #ffffff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-size: 18px;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.features ul, .applications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li, .applications li {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin: 10px 0;
+}
+
+.features li strong, .applications li strong {
+    color: #bb86fc;
+}
+
+.how-to-use ol {
+    list-style-type: decimal;
+    margin-top: 10px;
+}
+
+.how-to-use li {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin: 8px 0;
+}
+
+.project-links {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.project-links .btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #bb86fc;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+.project-links .btn:hover {
+    background-color: #3700b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .project-details {
+        padding: 25px;
+    }
+
+    .project-details h1 {
+        font-size: 28px;
+    }
+
+    .project-details h2 {
+        font-size: 24px;
+    }
+
+    .project-details p {
+        font-size: 16px;
+    }
+
+    .project-links .btn {
+        font-size: 16px;
+        padding: 10px 25px;
+    }
+}
