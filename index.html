@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Raviteja | Full Stack Developer Portfolio">
-    <meta name="keywords" content="Raviteja, Full Stack Developer, Portfolio, Web Development, JavaScript, Node.js, React">
+    <meta name="keywords" content="Raviteja, Full Stack Developer, Portfolio, Web Development">
     <meta name="author" content="Raviteja Shivanadhuni">
     <meta property="og:title" content="Raviteja | Portfolio">
     <meta property="og:description" content="Portfolio showcasing the skills and projects of Raviteja, a full-stack developer.">
@@ -12,146 +12,234 @@
     <meta property="og:url" content="https://ravitejashivanadhuni.netlify.app/">
     <meta name="twitter:card" content="summary_large_image">
     <title>Raviteja | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
 
     <!-- Navigation Bar -->
     <header>
-        <div class="logo">Raviteja</div>
+        <div class="logo" data-aos="fade-right">
+            <span class="logo-text">Raviteja</span>
+            <span class="logo-dot"></span>
+        </div>
         <nav>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <ul class="nav-links" data-aos="fade-left">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
         </nav>
     </header>
 
     <!-- Home Section -->
     <section id="home">
-        <div class="content">
-            <h1>Hello, I'm <span>Raviteja</span></h1>
-            <p> Full Stack Developer </p>
-            <a href="#contact" class="btn">Get in Touch</a>
+        <div class="content" data-aos="fade-up">
+            <h1>Hello, I'm <span class="highlight">Raviteja</span></h1>
+            <div class="typewriter">
+                <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+            </div>
+            <p class="subtitle">Crafting digital experiences with code</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary-btn">Get in Touch</a>
+                <a href="#projects" class="btn secondary-btn">View Work</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow"></div>
         </div>
     </section>
-
-    <!-- About Section -->
+    !-- About Section -->
     <section id="about">
         <div class="about-container">
-            <div class="profile-img">
-                <img src="https://lh3.googleusercontent.com/d/1STQghMI6N6_YbiYJRRpLglUIIkt8l_yk=w500" alt="Profile Picture">
+            <div class="profile-img" data-aos="fade-right">
+                <div class="img-container">
+                    <img src="https://lh3.googleusercontent.com/d/1STQghMI6N6_YbiYJRRpLglUIIkt8l_yk=w500" alt="Profile Picture">
+                    <div class="img-overlay"></div>
+                </div>
             </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>A passionate developer with experience in web development, backend systems, and problem-solving.</p>
-                <p>Focused on building scalable and efficient solutions using modern web technologies.</p>
+            <div class="about-text" data-aos="fade-left">
+                <h2 class="section-title">About Me</h2>
+                <div class="subtitle">Full Stack Developer & Problem Solver</div>
+                <p>A passionate developer with experience in web development, backend systems, and problem-solving. I specialize in creating scalable and efficient solutions using modern web technologies.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Projects Completed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill">Python</div>
-            <div class="skill">Java</div>
-            <div class="skill">HTML & CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Node.js</div>
-            <div class="skill">MongoDB</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Express.js</div>
-            <div class="skill">Git & GitHub</div>
-            <div class="skill">Cloud</div>
+        <h2 class="section-title" data-aos="fade-up">Skills & Expertise</h2>
+        <div class="skills-container">
+            <div class="skills-category" data-aos="fade-up">
+                <h3>Frontend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
+                        <div class="progress-bar"><div class="progress" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                        <div class="progress-bar"><div class="progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-js"></i>
+                        <span>JavaScript</span>
+                        <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category" data-aos="fade-up" data-aos-delay="100">
+                <h3>Backend Development</h3>
+                <div class="skills-grid">
+                    <div class="skill">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
+                        <div class="progress-bar"><div class="progress" style="width: 88%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
+                        <div class="progress-bar"><div class="progress" style="width: 82%"></div></div>
+                    </div>
+                    <div class="skill">
+                        <i class="fas fa-database"></i>
+                        <span>MongoDB</span>
+                        <div class="progress-bar"><div class="progress" style="width: 80%"></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project" onclick="redirectTo('hospital-management.html')">
+<!-- Projects Section -->
+<section id="projects">
+    <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+    <div class="project-container">
+        <div class="project" data-aos="fade-up">
+            <div class="project-image">
                 <img src="images/hospital.png" alt="Hospital Management System">
-                <div class="project-info">
-                    <h3>Hospital Management System</h3>
-                    <p>A web application for managing hospital operations efficiently.</p>
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                        <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                    </div>
                 </div>
             </div>
-            <div class="project" onclick="redirectTo('resume-builder.html')">
+            <div class="project-info">
+                <h3>Hospital Management System</h3>
+                <p>A comprehensive web application for managing hospital operations efficiently.</p>
+                <div class="project-tech">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>MongoDB</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+            <div class="project-image">
                 <img src="images/resume.png" alt="Resume Builder">
-                <div class="project-info">
-                    <h3>Resume Builder Web App</h3>
-                    <p>A MERN stack application for generating professional resumes.</p>
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fas fa-link"></i></a>
+                        <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>Resume Builder Web App</h3>
+                <p>A MERN stack application for generating professional resumes with customizable templates.</p>
+                <div class="project-tech">
+                    <span>MongoDB</span>
+                    <span>Express</span>
+                    <span>React</span>
+                    <span>Node.js</span>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:ravitejashivanadhuni@gmail.com">ravitejashivanadhuni@gmail.com</a></p>
-        
-        <!-- Social Media Links -->
-        <div class="contact-social">
-            <a href="https://github.com/raviteja244" target="_blank">
-                <i class="fab fa-github"></i> GitHub
-            </a>
-            <a href="https://linkedin.com/in/raviteja244" target="_blank">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
+<!-- Contact Section -->
+<section id="contact">
+    <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+    <div class="contact-container">
+        <div class="contact-info" data-aos="fade-right">
+            <div class="contact-card">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <a href="mailto:ravitejashivanadhuni@gmail.com">ravitejashivanadhuni@gmail.com</a>
+            </div>
+            <div class="contact-social">
+                <a href="https://github.com/raviteja244" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/raviteja244" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
         </div>
-
-        <!-- Contact Form -->
-        <h3>Or, send me a message:</h3>
-        <form action="https://formspree.io/f/xbldkgez" method="POST" id="contact-form">
-            <input type="text" name="name" id="name" placeholder="Your Name" required>
-            <input type="email" name="email" id="email" placeholder="Your Email" required>
-            <textarea name="message" id="message" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
+        
+        <form action="https://formspree.io/f/xbldkgez" method="POST" id="contact-form" data-aos="fade-left">
+            <div class="form-group">
+                <input type="text" name="name" id="name" required>
+                <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" id="email" required>
+                <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+                <textarea name="message" id="message" required></textarea>
+                <label for="message">Your Message</label>
+            </div>
+            <button type="submit" class="btn primary-btn">
+                <span>Send Message</span>
+                <i class="fas fa-paper-plane"></i>
+            </button>
         </form>
+    </div>
+    <div id="form-response"></div>
+</section>
 
-        <!-- Success/Error Feedback -->
-        <div id="form-response" class="form-response"></div>
-    </section>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Raviteja. All rights reserved.</p>
+    </div>
+</footer>
 
-    <script>
-        const form = document.getElementById('contact-form');
-        const formResponse = document.getElementById('form-response');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Show loading state
-            formResponse.innerHTML = 'Sending...';
-
-            // Send the form data via Formspree
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-            })
-            .then(response => {
-                if (response.ok) {
-                    form.reset(); // Reset form after success
-                    formResponse.innerHTML = 'Message sent successfully!';
-                    formResponse.style.color = 'green';
-                } else {
-                    formResponse.innerHTML = 'There was an error sending your message. Please try again.';
-                    formResponse.style.color = 'red';
-                }
-            })
-            .catch(error => {
-                formResponse.innerHTML = 'Error: ' + error.message;
-                formResponse.style.color = 'red';
-            });
-        });
-    </script>
-
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
